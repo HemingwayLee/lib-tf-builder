@@ -30,7 +30,8 @@ jobs:
           ./runner.sh
       - name: zip 
         run: |
-          zip ./tflite_build/libtensorflow-lite.a lib-tf-lite.zip
+          ls ./tflite_build/
+          zip lib-tf-lite ./tflite_build/libtensorflow-lite.a
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
